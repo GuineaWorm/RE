@@ -8,8 +8,8 @@ FCR = int(((6 - FCR) / 4) * 1000 + PingSpellDelay)
 #if Player.GetSkillValue('Magery') > 69.9 or Player.GetSkillValue('Mysticisim') > 69.9 and FC > 2:
 #    FC = 2
 while Player.GetRealSkillValue('Magery') < Player.GetSkillCap('Magery') and not Player.IsGhost:
-    if Player.GetSkillValue('Magery') < 30.0:
-        Misc.SendMessage('NPC train Magery to 30')
+    if Player.GetSkillValue('Magery') < 29.0:
+        Misc.SendMessage('NPC train Magery to 29')
         break
     if Player.GetSkillValue('Magery') < 45.1:
         t_mana = int(9 - (10 * (Player.LowerManaCost / 100)))

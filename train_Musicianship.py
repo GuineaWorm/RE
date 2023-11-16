@@ -61,7 +61,7 @@ def TrainMusicianship():
     Items.UseItem( instrument )
     Timer.Create( 'musichianshipTimer', musichianshipTimerMilliseconds )
 
-    while instrument != None and Player.GetSkillValue( 'Musicianship' ) < 100 and not Player.IsGhost:
+    while instrument != None and Player.GetSkillValue( 'Musicianship' ) < Player.GetSkillCap('Musicianship') and not Player.IsGhost:
         if not Timer.Check( 'musichianshipTimer' ):
             Items.UseItem( instrument )
             Timer.Create( 'musichianshipTimer', musichianshipTimerMilliseconds )
